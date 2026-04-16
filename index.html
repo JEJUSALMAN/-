@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토지수용보상 정당한 권리구제 센터 | 행정사강성팔사무소</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #fcfcfc; color: #1a202c; scroll-behavior: smooth; }
+        .chart-container { position: relative; width: 100%; max-width: 500px; margin: 0 auto; height: 350px; max-height: 400px; }
+        .step-card { transition: all 0.3s ease; border-left: 4px solid transparent; }
+        .step-card.active { border-left-color: #1e40af; background-color: #f1f5f9; transform: translateX(10px); }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .sticky-header { backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.9); }
+        .contact-pill { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.2); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- Chosen Palette: Navy Professional. 
+     Primary: Deep Blue (#1E3A8A) for trust. 
+     Secondary: Slate White (#F8FAFC). 
+     Accent: Gold (#EAB308) for call-to-action. 
+-->
+<!-- Application Structure Plan: 
+     1. Hero: Dynamic value prop emphasizing the office name and immediate trust.
+     2. Diagnosis: Interactive Chart.js to visually prove why initial offers are insufficient.
+     3. 3-Step Journey: Interactive tab system detailing the legal path to higher compensation.
+     4. Strategy Focus: highlighting the 12% interest claim as a professional "secret".
+     5. Professional Profile: Reinforcing why '행정사강성팔사무소' is the right choice.
+     6. Multi-Channel CTA: Phone and Email buttons for high conversion.
+-->
+<!-- Visualization & Content Choices: 
+     - Data Visualization: Doughnut chart to represent undervaluation factors.
+     - Interactive Navigation: Scroll-linked header and tabbed content blocks.
+     - Content logic: Problem (low offer) -> Solution (3 steps) -> Strategy (12%) -> CTA (Expert contact).
+     - NO SVG graphics used. Icons are unicode or CSS-based.
+-->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Navigation Bar -->
+    <nav class="sticky-header fixed top-0 w-full z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-blue-900 font-bold text-xl tracking-tight">⚖️ 행정사강성팔사무소</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#problem" class="text-slate-600 hover:text-blue-700 px-2 py-2 text-sm font-medium">저평가 진단</a>
+                    <a href="#process" class="text-slate-600 hover:text-blue-700 px-2 py-2 text-sm font-medium">증액 절차</a>
+                    <a href="#strategy" class="text-slate-600 hover:text-blue-700 px-2 py-2 text-sm font-medium">핵심 전략</a>
+                    <div class="flex items-center space-x-3">
+                        <a href="mailto:jejudajeju@naver.com" class="text-blue-800 text-sm font-bold flex items-center">
+                            <span class="mr-1">📧</span> 이메일 문의
+                        </a>
+                        <a href="tel:010-7760-2402" class="bg-blue-800 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition">
+                            📞 010-7760-2402
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 md:pt-48 md:pb-32 gradient-bg text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block px-4 py-1.5 rounded-full contact-pill text-blue-100 text-sm font-bold mb-6">토지수용증액보상 전문 | 행정사강성팔사무소</div>
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
+                귀하의 소중한 재산권,<br>
+                <span class="text-yellow-400">정당한 보상</span>을 약속드립니다.
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
+                국가 사업이라는 이유로 일방적인 보상금에 서명하지 마십시오.<br>
+                전문 행정사가 누락된 가치를 발굴하여 정당한 몫을 되찾아 드립니다.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="tel:010-7760-2402" class="bg-yellow-500 text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition shadow-xl">무료 전화상담</a>
+                <a href="mailto:jejudajeju@naver.com" class="bg-white/10 backdrop-blur text-white border border-white/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">이메일로 문의하기</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section: Diagnosis -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">왜 처음 제시된 보상액은 기대에 못 미칠까요?</h2>
+                <p class="text-slate-600">사업시행자의 보수적인 감정평가에는 분명히 누락된 가치가 존재합니다.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                    <h3 class="text-xl font-bold mb-6 text-blue-900 flex items-center">
+                        <span class="mr-2">📊</span> 초기 보상금 저평가 주요 항목
+                    </h3>
+                    <div class="chart-container">
+                        <canvas id="undervalueChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 feature-card">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4 text-2xl">🏚️</div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-blue-900">지장물 및 물건 누락</h4>
+                            <p class="text-slate-600 text-sm">현장 조사 시 창고, 수목, 영업손실 등 세부 항목을 소홀히 다루는 경우가 많습니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 feature-card">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4 text-2xl">📉</div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-blue-900">부적절한 비교표준지 선정</h4>
+                            <p class="text-slate-600 text-sm">토지의 잠재적 가치를 낮게 평가할 수 있는 표준지를 선정하여 단가를 하향 조정합니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-white rounded-2xl shadow-sm border border-slate-100 feature-card">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4 text-2xl">🧩</div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-blue-900">잔여지 활용도 저하</h4>
+                            <p class="text-slate-600 text-sm">수용 후 남은 땅이 맹지가 되거나 가치가 급락함에도 이에 대한 정당한 보상이 누락됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: 3-Step Process -->
+    <section id="process" class="py-20 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">보상금 증액을 위한 3단계 전략</h2>
+                <p class="text-slate-600">행정사강성팔사무소가 단계별 권리구제 절차를 철저히 지원합니다.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div class="space-y-4" id="process-steps">
+                    <div class="step-card active cursor-pointer p-6 rounded-xl bg-white shadow-sm" onclick="showStep(1)">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-bold text-blue-700">STEP 01</span>
+                            <span class="text-xs font-medium text-slate-400">행정적 구제</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">수용재결 신청</h3>
+                        <p class="text-slate-600 mt-2 text-sm">관할 토지수용위원회를 통한 공정하고 객관적인 재심사</p>
+                    </div>
+                    <div class="step-card cursor-pointer p-6 rounded-xl bg-white shadow-sm" onclick="showStep(2)">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-bold text-blue-700">STEP 02</span>
+                            <span class="text-xs font-medium text-slate-400">특별행정심판</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">이의재결 제기</h3>
+                        <p class="text-slate-600 mt-2 text-sm">중앙토지수용위원회에 논리적인 증액 의견서 제출</p>
+                    </div>
+                    <div class="step-card cursor-pointer p-6 rounded-xl bg-white shadow-sm" onclick="showStep(3)">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-bold text-blue-700">STEP 03</span>
+                            <span class="text-xs font-medium text-slate-400">사법적 구제</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">행정소송 대응</h3>
+                        <p class="text-slate-600 mt-2 text-sm">사법부의 판단을 통한 최종적이고 확정적인 증액 보상</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 min-h-[400px] relative">
+                    <div id="step-detail-1" class="step-detail">
+                        <div class="bg-blue-100 text-blue-800 w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold mb-6">1</div>
+                        <h4 class="text-2xl font-bold mb-4 text-blue-900">수용재결 (1단계)</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            협의가 성립되지 않을 때 거치는 필수 절차입니다. <strong>새로운 2개의 감정평가기관</strong>이 소유자의 입장을 반영하여 보상액을 재산정합니다. 전문 행정사가 소유자의 주장을 법률적으로 보강합니다.
+                        </p>
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                            <p class="text-red-700 font-bold text-sm italic">⏳ 신청 기한: 사업인정고시일부터 1년 이내</p>
+                        </div>
+                    </div>
+                    <div id="step-detail-2" class="step-detail hidden">
+                        <div class="bg-blue-100 text-blue-800 w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold mb-6">2</div>
+                        <h4 class="text-2xl font-bold mb-4 text-blue-900">이의재결 (2단계)</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            수용재결 보상액이 여전히 부족한 경우 중앙토지수용위원회에 이의를 신청합니다. 1단계 평가의 오류를 정밀하게 분석하여 추가 증액을 이끌어내는 고도의 법리적 과정입니다.
+                        </p>
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                            <p class="text-red-700 font-bold text-sm italic">⏳ 신청 기한: 재결서 정본 수령 후 30일 이내</p>
+                        </div>
+                    </div>
+                    <div id="step-detail-3" class="step-detail hidden">
+                        <div class="bg-blue-100 text-blue-800 w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold mb-6">3</div>
+                        <h4 class="text-2xl font-bold mb-4 text-blue-900">행정소송 (3단계)</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            최종적인 권리구제 수단으로, 법원이 지정한 감정평가사를 통해 독립적인 재평가를 받습니다. 법적 논거를 바탕으로 사법부의 판결을 통해 정당한 보상을 확정짓습니다.
+                        </p>
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                            <p class="text-red-700 font-bold text-sm italic">⏳ 신청 기한: 이의재결 수령 후 60일 이내</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Strategic Secret -->
+    <section id="strategy" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-[3rem] p-8 md:p-16 text-white flex flex-col md:flex-row items-center gap-12 border-4 border-blue-900 shadow-2xl">
+                <div class="flex-1">
+                    <div class="text-yellow-400 font-bold text-lg mb-4">💡 전문가만 아는 핵심 전략</div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">조기 재결 신청으로<br>지연이자 12%를 확보하세요.</h2>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                        시행자에게 재결 신청을 청구했으나 60일을 넘길 경우, 
+                        지연 기간에 대해 <strong>연 12%의 고율 이자</strong>가 보상금에 가산됩니다. 
+                        이는 권리 행사를 선제적으로 할 때만 얻을 수 있는 추가 수익입니다.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <span class="bg-blue-700 text-white font-bold px-4 py-1 rounded-full text-sm">전략적 청구</span>
+                        <span class="text-slate-400">지연가산금 권리 보호</span>
+                    </div>
+                </div>
+                <div class="bg-white/5 backdrop-blur p-10 rounded-full border border-white/10 text-center w-64 h-64 flex flex-col justify-center">
+                    <div class="text-6xl font-bold text-yellow-400 mb-2">+12%</div>
+                    <div class="text-sm font-medium text-slate-300">연 법정이자</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-white border-t border-slate-200 py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">지금, 정당한 권리를 상담하십시오</h2>
+            <p class="text-slate-600 mb-12 max-w-2xl mx-auto">
+                법은 잠자는 자의 권리를 보호하지 않습니다. 보상금의 차이는 준비한 자만이 만들어낼 수 있습니다.
+            </p>
+            
+            <div class="bg-slate-50 border border-slate-100 p-8 md:p-12 rounded-[2.5rem] shadow-sm mb-16">
+                <div class="text-blue-900 font-bold text-xl mb-8">행정사강성팔사무소 공식 연락처</div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-10">
+                    <a href="tel:010-7760-2402" class="group flex flex-col items-center p-6 bg-white rounded-2xl border border-slate-200 hover:border-blue-500 transition shadow-sm">
+                        <span class="text-3xl mb-3">📞</span>
+                        <span class="text-slate-500 text-xs font-bold mb-1">대표 번호</span>
+                        <span class="text-2xl md:text-3xl font-bold text-blue-900 group-hover:text-blue-700 transition">010-7760-2402</span>
+                    </a>
+                    <a href="mailto:jejudajeju@naver.com" class="group flex flex-col items-center p-6 bg-white rounded-2xl border border-slate-200 hover:border-blue-500 transition shadow-sm">
+                        <span class="text-3xl mb-3">📧</span>
+                        <span class="text-slate-500 text-xs font-bold mb-1">이메일 문의</span>
+                        <span class="text-xl md:text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition">jejudajeju@naver.com</span>
+                    </a>
+                </div>
+
+                <div class="text-slate-500 text-sm space-y-2">
+                    <p>📍 토지수용, 잔여지 보상, 지장물 누락 검토, 이의신청 대행 전문</p>
+                    <p>📍 제주도 및 전국 공익사업 보상 증액 프로젝트 수행</p>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
+                <p>&copy; 2024 행정사강성팔사무소. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="tel:010-7760-2402" class="hover:text-blue-600">전화상담</a>
+                    <a href="mailto:jejudajeju@naver.com" class="hover:text-blue-600">이메일문의</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // --- Step Interaction Logic ---
+        function showStep(step) {
+            document.querySelectorAll('.step-card').forEach((card, index) => {
+                if (index + 1 === step) card.classList.add('active');
+                else card.classList.remove('active');
+            });
+
+            document.querySelectorAll('.step-detail').forEach((detail, index) => {
+                if (index + 1 === step) detail.classList.remove('hidden');
+                else detail.classList.add('hidden');
+            });
+        }
+
+        // --- Chart.js Initializer ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('undervalueChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['비교표준지 선정 미흡', '지장물 현장 누락', '잔여지 가치하락', '기타 보상 누락'],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: [
+                            '#1e3a8a', // Deep Navy
+                            '#3b82f6', // Bright Blue
+                            '#eab308', // Accent Gold
+                            '#cbd5e1'  // Slate Grey
+                        ],
+                        hoverOffset: 12,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 25,
+                                font: { family: "'Noto Sans KR', sans-serif", size: 13 }
+                            }
+                        },
+                        tooltip: {
+                            padding: 12,
+                            callbacks: {
+                                label: function(context) {
+                                    return ` ${context.label}: 약 ${context.raw}%의 증액 가능성`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '72%'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
